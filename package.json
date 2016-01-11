@@ -1,0 +1,40 @@
+{
+  "name": "marcnewport",
+  "version": "0.1.0",
+  "description": "Portfolio website for marcnewport.com",
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "imagemin": "latest",
+    "jade": "latest",
+    "livereload": "latest",
+    "node-sass": "latest",
+    "npm-run-all": "latest",
+    "postcss": "^5.0.10",
+    "postcss-cli": "^2.3.2",
+    "uglify-js": "^2.5.0",
+    "watch-run": "^1.2.2"
+  },
+  "scripts": {
+    "js": "uglifyjs source/js/main.js -o build/js/main.js --compress --mangle",
+    "sass": "node-sass source/sass/ -o build/css/ --output-style compressed",
+    "postsass": "postcss --use autoprefixer build/css/*.css --replace",
+    "jade": "jade source/ -o build/ --pretty",
+    "assets": "imagemin source/assets/ build/assets/",
+    "watch:jade": "watch-run -p 'source/*.jade' npm run jade",
+    "watch:sass": "watch-run -p 'source/sass/*.scss' npm run sass",
+    "watch:js": "watch-run -p 'source/js/*.js' npm run js",
+    "watch:assets": "watch-run -p 'source/assets/*' npm run assets",
+    "reload": "livereload build",
+    "dev": "npm-run-all --parallel watch:* reload"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcnewport/marcnewport.git"
+  },
+  "author": "marcnewport@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcnewport/marcnewport/issues"
+  },
+  "homepage": "https://github.com/marcnewport/marcnewport#readme"
+}
