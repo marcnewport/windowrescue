@@ -11,7 +11,7 @@ html.no-js(lang='en')
     link(href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet', type='text/css')
     //- link(href='http://fonts.googleapis.com/css?family=Lato:900', rel='stylesheet', type='text/css')
     //- link(href='http://fonts.googleapis.com/css?family=Open+Sans:700,400', rel='stylesheet', type='text/css')
-    //- link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900,700,400', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900,700,400,200', rel='stylesheet', type='text/css')
     //- link(href='http://fonts.googleapis.com/css?family=Lato:300,700,100italic,300italic', rel='stylesheet', type='text/css')
     link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet')
     link(href='css/main.css', rel='stylesheet', type='text/css')
@@ -19,32 +19,31 @@ html.no-js(lang='en')
     
   body
     section#navigation
-      nav.navbar.navbar-inverse.navbar-static-top
-        .container-fluid
+      nav.navbar.navbar-static-top
+        .container
           .navbar-header
             button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse', aria-expanded='false')
               span.sr-only Toggle navigation
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            //-   span.glyphicon.glyphicon-menu-hamburger
-            //-   i.fa.fa-navicon
-            //- a.navbar-brand(href='#') Brand
-          .collapse.navbar-collapse
+            a.navbar-brand(href='#')
+              img(src='assets/logo-long.png', alt='Window Rescue')
+          .collapse.navbar-collapse.navbar-right
             ul.nav.navbar-nav
               li.active
-                a(href='#') Home
+                a(href='#home') Home
               li
-                a(href='#') Services
+                a(href='#services') Services
               li
-                a(href='#') About
+                a(href='#about') About
               li
-                a(href='#') Tips
+                a(href='#tips') Tips
               li
-                a(href='#') Contact
-            p.navbar-text.pull-right
-              span.glyphicon.glyphicon-phone-alt
-              | 027 476 2716
+                a(href='#contact') Contact
+            //- p.navbar-text.pull-right
+            //-   span.glyphicon.glyphicon-phone-alt
+            //-   | 027 476 2716
     
     
     
@@ -52,9 +51,8 @@ html.no-js(lang='en')
       .container
         .row
           .col-xs-12
-            h1 Window Rescue
-            p Affordable and friendly window repair specialist with over 15 years experience servicing Wellington and the greater area. Get in touch for an obligation free quote.
-            button.btn.btn-primary.btn-lg(type='button') Get in touch
+            h1 Affordable and friendly window repair specialist with over 15 years experience servicing wellington and the greater area.
+            button.btn.btn-primary.btn-lg(type='button') Get in touch for a free quote
             
             
             
@@ -63,37 +61,37 @@ html.no-js(lang='en')
         .row
           .col-xs-12
             h2 Services
-          .col-xs-3
+          .col-xs-12.col-sm-3
             span.glyphicon.glyphicon-wrench
             h3 Repair Damaged and Replace Worn Parts
             p Hard ware, for example window catches, door hinges, and window stays or hinges have a limited life unless maintained. Door handles for sliding doors and hinged doors wear overtime and need servicing or replacing.
             
-          .col-xs-3
+          .col-xs-12.col-sm-3
             span.glyphicon.glyphicon-tint
             h3 Track and Repair Leaking Windows and Doors
             p Sometimes water can get in, this can be due to a number of causes, for example incorrect installation, shrinking rubber seals, inadequate flashing above and around windows. In most cases these can be located and repaired.
             
-          .col-xs-3
+          .col-xs-12.col-sm-3
             span.glyphicon.glyphicon-eye-open
             h3 Identify Installation Issues
             p Some installation issues can cause opening doors and windows sashes closing incorrectly causing draughts. There is often a solution to reduce draughts however in some cases doors and windows may need reinstalling.
             
-          .col-xs-3
+          .col-xs-12.col-sm-3
             span.glyphicon.glyphicon-eye-open
             h3 Install Restrictor Stays
             p Restrictor stays provide security and prevent small children falling out of windows. Council regulations require restrictor stays to be installed on all windows below 760mm from the floor or in the bathroom windows above baths or toilets. Windows in these situations are only to open 100mm.
             
-          .col-xs-3
+          .col-xs-12.col-sm-3
             span.glyphicon.glyphicon-eye-open
             h3 Install Seal Replacements
             p Window seals shrink and leave gaps for air to get through causing draughts. Regular maintenance identifies this issue and seals can be replaced.
             
-          .col-xs-3
+          .col-xs-12.col-sm-3
             span.glyphicon.glyphicon-eye-open
             h3 Retro Fit Double Glazing
             p In most instances single glazed aluminium windows can be retrofitted with double glazing.
             
-          .col-xs-3
+          .col-xs-12.col-sm-3
             span.glyphicon.glyphicon-eye-open
             h3 Recommend Window Solutions
             p Provide practical advice on the type of windows and doors to suit different house designs.
@@ -105,23 +103,42 @@ html.no-js(lang='en')
         .row
           .col-xs-12
             h2 About
-          .col-xs-3
+          .col-xs-6.col-sm-3
             img()
-          .col-xs-3
+          .col-xs-6.col-sm-3
             img()
-          .col-xs-6
+          .col-xs-12.col-sm-6
             p I have had 28 years working in the window industry and I am an experienced aluminium joiner. I have worked in all areas including managing the factory, installing windows and doors onsite and managing the maintenance service for several window franchises.
             p I am member of the Windows Association and I enjoy working in the industry. I am friendly, approachable, and reliable and I get on well with clients, suppliers and tradesmen.
         .row
-          .col-xs-6
+          .col-xs-12.col-sm-6
             blockquote This is a blockquote section
             span - Joe Bloggs, Johnsonville
-          .col-xs-6
+          .col-xs-12.col-sm-6
             blockquote This is another blockquote section
             span - Joe Bloggs, Johnsonville
             
             
             
+    section#tips
+      .container
+        .row
+          .col-xs-12
+            h2 Tips
+        .row
+          .col-xs-12.col-sm-4
+            h3 My Sliding Door Is Really Hard To Close
+            p This is often due to wheels seizing through lack of maintenance. A useful solution is to purchase a penetrating oil and water-displacing spray from a local hardware store. Spray around the wheels, this should allow the wheels to roll more freely. This product is also useful in the maintenance of door hinges, preventing rust and reducing squeaks.
+            
+          .col-xs-12.col-sm-4
+            h3 Discolouring And Fading Powder Coated Windows
+            p To prevent this happening the outside of windows and doors should be cleaned with a soft cloth and mild liquid detergent in warm water and then rinsed with cold clean water on a regular basis. We suggest this is done at least 6 monthly and more often if you live closer to the sea.
+          
+          .col-xs-12.col-sm-4
+            h3 Removing Sunbaked Stickers On Glass
+            p Use an orange based cleaner available from your local hardware store to remove sun baked stickers off windows and doors.
+        
+        
     section#contact
       .container
         .row
@@ -129,11 +146,11 @@ html.no-js(lang='en')
             h2 Contact
           .col-xs-12
             p Get in touch for an obligation free quote.
-          .col-xs-6
+          .col-xs-12.col-sm-6
             p 
               span.glyphicon.glyphicon-phone-alt
             p 027 476 2716
-          .col-xs-6
+          .col-xs-12.col-sm-6
             p 
               i.fa.fa-envelope
             p 
