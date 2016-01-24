@@ -1,3 +1,43 @@
+$text-color: #333333;
+$blue-color: #42B4FF;
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 17px;
+  color: $text-color;
+  // position: relative;
+}
+
+section {
+
+  h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 50px 0 20px;
+  }
+
+  hr {
+    margin: 0 46% 50px;
+    border: none;
+    border-bottom: 1px solid $text-color;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &:nth-child(even) {
+    background-color: #F7F7F7;
+  }
+}
+
+
 
 #navigation {
   //background-color: #666666;
@@ -9,21 +49,36 @@
     background-color: rgba(0, 0, 0, 0.3);
     border: none;
     color: #FFFFFF;
+    // transition: background-color 0.5s, color 0.5s;
+
+    .active a {
+      text-decoration: underline;
+    }
 
     a {
       color: #FFFFFF;
     }
 
+    &.navbar-solid {
+      background-color: #c5c5c5;
+      color: $text-color;
+
+      a {
+        color: $text-color;
+      }
+    }
+
     a:hover,
     .active a {
       background: none;
-      color: #42B4FF;
+      color: $blue-color;
     }
 
     a:focus {
       outline: 1px dotted #FFFFFF;
       background: none;
     }
+
   }
 
   .navbar-brand {
@@ -31,19 +86,186 @@
   }
 }
 
+
+
 #home {
-  background: url('../assets/housewindow.jpg') no-repeat center top;
+  background: url('../assets/housewindow.jpg') no-repeat center 0px;
   background-size: cover;
   color: #FFFFFF;
-  min-height: 80vh;
-  // margin-top: -50px;
+  //min-height: 80vh;
   padding-top: 100px;
 
   h1 {
-    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
-    text-transform: uppercase;
-    font-size: 3.8em;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    font-size: 3.9em;
+    line-height: 1.3em;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+    em {
+      font-weight: 700;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 2em;
+    margin: 50px 0 80px;
+    box-shadow: 0 7px 0 darken($blue-color, 15%);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+    &:hover {
+      box-shadow: 0 7px 0 darken($blue-color, 30%);
+    }
+  }
+}
+
+
+
+#services {
+
+  .service {
+    margin: 30px 0;
+    transition: transform 1s;
+  }
+
+  .icon {
+    width: 40%;
+    // height: 100px;
+    overflow: hidden;
+    margin: 0 auto 30px;
+
+    svg {
+      fill: $text-color;
+      border: 1px solid black;
+    }
+  }
+}
+
+
+
+#about {
+
+  img {
+    margin-bottom: 15px;
+  }
+
+  .img-circle {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto 15px;
+  }
+
+  svg {
+    fill: $text-color;
+    margin-top: 10px;
+  }
+
+  .quote {
+    position: relative;
+    margin: 4em 0;
+
+    .fa {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #e4e4e4;
+      font-size: 4em;
+      font-style: italic;
+    }
+
+    blockquote {
+      position: relative;
+      border: none;
+      font-size: 1.5em;
+      font-weight: 700;
+      font-style: italic;
+      margin: 25px 0 0 15px;
+    }
+
+    span {
+      margin-left: 5em;
+    }
+  }
+}
+
+
+
+#tips {
+
+  .tip {
+    margin-bottom: 2em;
+  }
+}
+
+
+
+#img-break {
+  // background: url('../assets/wellington-harbour.jpg') no-repeat center;
+  background: url('../assets/cablecar.jpg') no-repeat center 0px;
+  background-size: cover;
+  height: 400px;
+}
+
+
+
+#contact {
+  background-color: #333333;
+  color: #FFFFFF;
+
+  hr {
+    border-color: #FFFFFF;
+    margin-bottom: 5em;
+  }
+
+  .contact-method {
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 3em;
+
+    .fa {
+      font-size: 2.5em;
+    }
+
+    a {
+      color: #FFFFFF;
+    }
+  }
+}
+
+
+@media(max-width:767px) {
+  #home {
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .btn {
+      font-size: 1.2em;
+    }
+  }
+
+  #img-break {
+    height: 200px;
+  }
+}
+
+@media(min-width:768px) {
+  #home {
+
+    h1 {
+      font-size: 2.8em;
+    }
+
+    .btn {
+      font-size: 1.6em;
+    }
+  }
+
+  #img-break {
+    height: 300px;
   }
 }

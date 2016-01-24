@@ -8,18 +8,18 @@
     <meta name="description" content="Description of the page">
     <meta name="keywords" content="Comma separated keywords">
     <meta name="rating" content="General">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:900,700,400,200" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <script src="//localhost:35729/livereload.js?snipver=1"></script>
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar">
     <section id="navigation">
-      <nav class="navbar navbar-static-top">
+      <nav class="navbar navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-            <button type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand"><img src="assets/logo-long.png" alt="Window Rescue"></a>
+            <button type="button" title="Toggle navigation" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" class="navbar-toggle collapsed"><i class="fa fa-bars"></i></button><a href="" class="navbar-brand"><img src="assets/logo-long.png" alt="Window Rescue"></a>
           </div>
           <div class="collapse navbar-collapse navbar-right">
             <ul class="nav navbar-nav">
@@ -29,18 +29,19 @@
               <li><a href="#tips">Tips</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-            
-            
           </div>
         </div>
       </nav>
     </section>
-    <section id="home">
+    <section id="home" class="parallax">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <h1>Affordable and friendly window repair specialist with over 15 years experience servicing wellington and the greater area.</h1>
-            <button type="button" class="btn btn-primary btn-lg">Get in touch for a free quote</button>
+            <h1>
+               
+              Affordable and friendly <em>window repair specialist </em>with over 15 years experience servicing <em>Wellington </em>and the greater area.
+            </h1>
+            <p> <a href="#contact" class="btn btn-primary btn-lg">Get in touch for a free quote</a></p>
           </div>
         </div>
       </div>
@@ -50,34 +51,49 @@
         <div class="row">
           <div class="col-xs-12">
             <h2>Services</h2>
+            <hr>
           </div>
-          <div class="col-xs-12 col-sm-3"><span class="glyphicon glyphicon-wrench"></span>
+        </div>
+        <div class="row">
+          <div class="service col-xs-12 col-sm-4">
+            <div class="icon"><img src="assets/aid-kit.svg" alt="" class="img-responsive svg"></div>
             <h3>Repair Damaged and Replace Worn Parts</h3>
             <p>Hard ware, for example window catches, door hinges, and window stays or hinges have a limited life unless maintained. Door handles for sliding doors and hinged doors wear overtime and need servicing or replacing.</p>
           </div>
-          <div class="col-xs-12 col-sm-3"><span class="glyphicon glyphicon-tint"></span>
+          <div class="service col-xs-12 col-sm-4">
+            <div class="icon"><img src="assets/droplet.svg" alt="" class="img-responsive svg"></div>
             <h3>Track and Repair Leaking Windows and Doors</h3>
             <p>Sometimes water can get in, this can be due to a number of causes, for example incorrect installation, shrinking rubber seals, inadequate flashing above and around windows. In most cases these can be located and repaired.</p>
           </div>
-          <div class="col-xs-12 col-sm-3"><span class="glyphicon glyphicon-eye-open"></span>
+          <div class="service col-xs-12 col-sm-4">
+            <div class="icon"><img src="assets/search.svg" alt="" class="img-responsive svg"></div>
             <h3>Identify Installation Issues</h3>
             <p>Some installation issues can cause opening doors and windows sashes closing incorrectly causing draughts. There is often a solution to reduce draughts however in some cases doors and windows may need reinstalling.</p>
           </div>
-          <div class="col-xs-12 col-sm-3"><span class="glyphicon glyphicon-eye-open"></span>
-            <h3>Install Restrictor Stays</h3>
-            <p>Restrictor stays provide security and prevent small children falling out of windows. Council regulations require restrictor stays to be installed on all windows below 760mm from the floor or in the bathroom windows above baths or toilets. Windows in these situations are only to open 100mm.</p>
+        </div>
+        <div class="row">
+          <div class="service col-xs-12 col-sm-4">
+            <div class="icon"><img src="assets/bubble.svg" alt="" class="img-responsive svg"></div>
+            <h3>Recommend Window Solutions</h3>
+            <p>Provide practical advice on the type of windows and doors to suit different house designs.</p>
           </div>
-          <div class="col-xs-12 col-sm-3"><span class="glyphicon glyphicon-eye-open"></span>
-            <h3>Install Seal Replacements</h3>
-            <p>Window seals shrink and leave gaps for air to get through causing draughts. Regular maintenance identifies this issue and seals can be replaced.</p>
-          </div>
-          <div class="col-xs-12 col-sm-3"><span class="glyphicon glyphicon-eye-open"></span>
+          <div class="service col-xs-12 col-sm-4">
+            <div class="icon"><img src="assets/stack.svg" alt="" class="img-responsive svg"></div>
             <h3>Retro Fit Double Glazing</h3>
             <p>In most instances single glazed aluminium windows can be retrofitted with double glazing.</p>
           </div>
-          <div class="col-xs-12 col-sm-3"><span class="glyphicon glyphicon-eye-open"></span>
-            <h3>Recommend Window Solutions</h3>
-            <p>Provide practical advice on the type of windows and doors to suit different house designs.</p>
+          <div class="service col-xs-12 col-sm-4">
+            <div class="icon"><img src="assets/hammer.svg" alt="" class="img-responsive svg"></div>
+            <h3>Install Seal Replacements</h3>
+            <p>Window seals shrink and leave gaps for air to get through causing draughts. Regular maintenance identifies this issue and seals can be replaced.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="service col-xs-12 col-sm-4"></div>
+          <div class="service col-xs-12 col-sm-4">
+            <div class="icon"><img src="assets/wrench.svg" alt="" class="img-responsive svg"></div>
+            <h3>Install Restrictor Stays</h3>
+            <p>Restrictor stays provide security and prevent small children falling out of windows. Council regulations require restrictor stays to be installed on all windows below 760mm from the floor or in the bathroom windows above baths or toilets. Windows in these situations are only to open 100mm.</p>
           </div>
         </div>
       </div>
@@ -87,19 +103,20 @@
         <div class="row">
           <div class="col-xs-12">
             <h2>About</h2>
+            <hr>
           </div>
-          <div class="col-xs-6 col-sm-3"><img></div>
-          <div class="col-xs-6 col-sm-3"><img></div>
+          <div class="col-xs-12 col-sm-3"><img src="assets/profile-pic.jpg" alt="" class="img-responsive img-circle"></div>
+          <div class="col-xs-12 col-sm-3"><img src="assets/window-association.svg" alt="" class="img-responsive svg"></div>
           <div class="col-xs-12 col-sm-6">
             <p>I have had 28 years working in the window industry and I am an experienced aluminium joiner. I have worked in all areas including managing the factory, installing windows and doors onsite and managing the maintenance service for several window franchises.</p>
             <p>I am member of the Windows Association and I enjoy working in the industry. I am friendly, approachable, and reliable and I get on well with clients, suppliers and tradesmen.</p>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-6">
+          <div class="quote col-xs-12 col-sm-6"><i class="fa fa-quote-left"></i>
             <blockquote>This is a blockquote section</blockquote><span>- Joe Bloggs, Johnsonville</span>
           </div>
-          <div class="col-xs-12 col-sm-6">
+          <div class="quote col-xs-12 col-sm-6"><i class="fa fa-quote-left"></i>
             <blockquote>This is another blockquote section</blockquote><span>- Joe Bloggs, Johnsonville</span>
           </div>
         </div>
@@ -110,40 +127,43 @@
         <div class="row">
           <div class="col-xs-12">
             <h2>Tips</h2>
+            <hr>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-4">
+          <div class="tip col-xs-12 col-sm-4">
             <h3>My Sliding Door Is Really Hard To Close</h3>
             <p>This is often due to wheels seizing through lack of maintenance. A useful solution is to purchase a penetrating oil and water-displacing spray from a local hardware store. Spray around the wheels, this should allow the wheels to roll more freely. This product is also useful in the maintenance of door hinges, preventing rust and reducing squeaks.</p>
           </div>
-          <div class="col-xs-12 col-sm-4">
+          <div class="tip col-xs-12 col-sm-4">
             <h3>Discolouring And Fading Powder Coated Windows</h3>
             <p>To prevent this happening the outside of windows and doors should be cleaned with a soft cloth and mild liquid detergent in warm water and then rinsed with cold clean water on a regular basis. We suggest this is done at least 6 monthly and more often if you live closer to the sea.</p>
           </div>
-          <div class="col-xs-12 col-sm-4">
+          <div class="tip col-xs-12 col-sm-4">
             <h3>Removing Sunbaked Stickers On Glass</h3>
             <p>Use an orange based cleaner available from your local hardware store to remove sun baked stickers off windows and doors.</p>
           </div>
         </div>
       </div>
     </section>
+    <section id="img-break" class="parallax"></section>
     <section id="contact">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
             <h2>Contact</h2>
+            <hr>
           </div>
-          <div class="col-xs-12">
-            <p>Get in touch for an obligation free quote.</p>
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <p> <span class="glyphicon glyphicon-phone-alt"></span></p>
+          <div class="contact-method col-xs-12 col-sm-4">
+            <p> <i class="fa fa-phone"></i></p>
             <p>027 476 2716</p>
           </div>
-          <div class="col-xs-12 col-sm-6">
-            <p> <i class="fa fa-envelope"></i></p>
-            <p> <a href="mailto:rossnewport@gmail.com">rossnewport@gmail.com</a></p>
+          <div class="contact-method col-xs-12 col-sm-4"><a href="mailto:ross@windowrescue.co.nz">
+              <p><i class="fa fa-envelope"></i></p>
+              <p>ross@windowrescue.co.nz</p></a></div>
+          <div class="contact-method col-xs-12 col-sm-4">
+            <p> <i class="fa fa-map-marker"></i></p>
+            <p>Wellington, New Zealand</p>
           </div>
         </div>
       </div>
