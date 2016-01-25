@@ -97,7 +97,6 @@ section {
 
   h1 {
     font-weight: 200;
-    font-size: 3.9em;
     line-height: 1.3em;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
@@ -111,7 +110,6 @@ section {
   }
 
   .btn {
-    font-size: 2em;
     margin: 50px 0 80px;
     box-shadow: 0 7px 0 darken($blue-color, 15%);
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
@@ -267,5 +265,39 @@ section {
 
   #img-break {
     height: 300px;
+  }
+}
+
+@media(min-width:992px) {
+  #home {
+
+    h1 {
+    font-size: 3.9em;
+    }
+
+    .btn {
+      font-size: 2em;
+    }
+  }
+
+  #img-break {
+    height: 400px;
+  }
+}
+
+@media(min-width:1400px) {
+  #home {
+
+    h1 {
+    font-size: 4.5em;
+    }
+
+    .btn {
+      font-size: 2.3em;
+    }
+  }
+
+  #img-break {
+    height: 500px;
   }
 }
