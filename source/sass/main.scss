@@ -89,7 +89,8 @@ section {
 
 
 #home {
-  background: url('../assets/housewindow.jpg') no-repeat center 0px;
+  // background: url('../assets/housewindow.jpg') no-repeat center 0px;
+  background: url('../assets/door-closed.jpg') no-repeat center 0px;
   background-size: cover;
   color: #FFFFFF;
   //min-height: 80vh;
@@ -98,7 +99,7 @@ section {
   h1 {
     font-weight: 200;
     line-height: 1.3em;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 
     em {
       font-weight: 700;
@@ -151,8 +152,8 @@ section {
   }
 
   .img-circle {
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     margin: 0 auto 15px;
   }
 

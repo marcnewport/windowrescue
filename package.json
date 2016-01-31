@@ -25,7 +25,6 @@
     "watch:jade": "watch-run -p 'source/*.jade' npm run jade",
     "watch:sass": "watch-run -p 'source/sass/*.scss' npm run sass",
     "watch:js": "watch-run -p 'source/js/*.js' npm run js",
-    "watch:assets": "watch-run -p 'source/assets/*' npm run assets",
     "reload": "livereload build",
     "dev": "npm-run-all --parallel watch:* reload"
   },
