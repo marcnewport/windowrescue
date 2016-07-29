@@ -2,6 +2,9 @@
 
   'use strict';
 
+  var $window = $(window);
+  var $document = $(document);
+
 
 
   /**
@@ -27,52 +30,43 @@
 
 
 
-
-
-    var $services = $('#services');
-    var delay = 0;
-    var animated = false;
-    var threshold = Math.round($services.position().top - ($(window).height() / 2));
-
-    // Make icons small so we can animate them to normal size
-    $services.find('.service').css({
-      transform: 'scale(0.5)'
+    // Get the browser height
+    var windowHeight = $window.height();
+    // And on resize
+    $window.on('resize', function() {
+      windowHeight = $window.height();
     });
 
+
     // Add scroll listener
-    $(document).on('scroll', function(e) {
-      // Animate some elements inside a section
-      if (document.body.scrollTop > threshold && ! animated) {
-        $('#services').find('.service').each(function() {
-          var $service = $(this);
-          setTimeout(function() {
-            $service.css({
-              transform: 'scale(1)'
-            });
-          }, delay);
-          delay += 200;
-        });
-      }
+    $document.on('scroll', function(e) {
+
+      var scrollTop = $document.scrollTop(),
+          parallax = 0.3;
 
       // Add parallax effect to background images marked .parallax
       $('.parallax').each(function() {
+
         // Figure out there offset relative to the page scroll
         var $this = $(this),
-            oTop = $this.position().top,
-            sTop = document.body.scrollTop,
-            parallax = 0.4,
-            position = (sTop - oTop) * parallax;
+            offsetTop = $this.position().top,
+            $img = $this.find('.parallax-image'),
+            diff = 0;
 
-        // Some images need a bigger offset
-        switch ($this.attr('id')) {
-          case 'img-break':
-            position -= 180;
-            break;
+        if (scrollTop + windowHeight > offsetTop) {
+          diff = (scrollTop + windowHeight) - offsetTop;
+          $img.css({ top: '-'+ Math.round(diff * parallax) +'px' });
         }
-
-        $this.css({ backgroundPosition: 'center '+ Math.round(position) +'px' });
       });
-    });
+    })
+    .trigger('scroll');
+
+
+    // Reveal animation
+    var sr = ScrollReveal();
+    if (sr.isSupported()) {
+      sr.reveal('.service, .contact-method', { duration: 1000 });
+    }
 
     // Convert SVG images to inline SVG
     // $('img.svg').each(inlineSVG);
@@ -133,5 +127,17 @@
 
 
 
-  $(document).ready(init);
+   /**
+    * Check if client supports CSS Transform and CSS Transition.
+    * @return {boolean}
+    */
+    ScrollReveal.prototype.isSupported = function () {
+      var style = document.documentElement.style;
+      return 'WebkitTransition' in style && 'WebkitTransform' in style
+        || 'transition' in style && 'transform' in style;
+    }
+
+
+
+  $document.ready(init);
 }(jQuery));

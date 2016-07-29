@@ -12,33 +12,35 @@ html.no-js(lang='en')
     link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet')
     link(href='css/bootstrap.min.css', rel='stylesheet', type='text/css')
     link(href='css/main.css', rel='stylesheet', type='text/css')
-    script(src='//localhost:35729/livereload.js?snipver=1')
+    | <!--[if IE]>
+    link(href='css/ie.css', rel='stylesheet', type='text/css')
+    | <![endif]-->
     
   body(data-spy='scroll', data-target='.navbar')
-    section#navigation
-      nav.navbar.navbar-fixed-top
-        .container
-          .navbar-header
-            button.navbar-toggle.collapsed(type='button', title='Toggle navigation', data-toggle='collapse', data-target='.navbar-collapse', aria-expanded='false')
-              i.fa.fa-bars
-            a.navbar-brand(href='')
-              img(src='assets/logo-long.png', alt='Window Rescue')
-          .collapse.navbar-collapse.navbar-right
-            ul.nav.navbar-nav
-              li.active
-                a(href='#home') Home
-              li
-                a(href='#services') Services
-              li
-                a(href='#about') About
-              li
-                a(href='#tips') Tips
-              li
-                a(href='#contact') Contact
+    nav.navbar.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', title='Toggle navigation', data-toggle='collapse', data-target='.navbar-collapse', aria-expanded='false')
+            i.fa.fa-bars
+          a.navbar-brand(href='')
+            img(src='assets/logo-long.png', alt='Window Rescue')
+        .collapse.navbar-collapse.navbar-right
+          ul.nav.navbar-nav
+            li.active
+              a(href='#home') Home
+            li
+              a(href='#services') Services
+            li
+              a(href='#about') About
+            li
+              a(href='#tips') Tips
+            li
+              a(href='#contact') Contact
     
     
     
     section#home.parallax
+      img.background-image.parallax-image(src="assets/door-closed.jpg" alt="")
       .container
         .row
           .col-xs-12
@@ -147,6 +149,7 @@ html.no-js(lang='en')
             p Use an orange based cleaner available from your local hardware store to remove sun baked stickers off windows and doors.
         
     section#img-break.parallax
+      img.background-image.parallax-image(src="assets/cablecar.jpg", alt="")
         
     section#contact
       .container
@@ -176,6 +179,7 @@ html.no-js(lang='en')
             
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js')
+    script(src='//cdn.jsdelivr.net/scrollreveal.js/3.0.3/scrollreveal.min.js')
     script(src='js/main.js')
     //google analytics tracking
     script(src='http://www.google-analytics.com/analytics.js')

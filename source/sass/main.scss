@@ -8,7 +8,38 @@ body {
   // position: relative;
 }
 
+.navbar {
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
+
+  .navbar-brand {
+    padding: 5px 0;
+  }
+
+  .active a {
+    text-decoration: underline;
+  }
+
+  a {
+    color: $text-color;
+  }
+
+  a:hover,
+  .active a {
+    background: none;
+    color: $blue-color;
+  }
+
+  a:focus {
+    outline: 1px dotted $text-color;
+    background: none;
+  }
+}
+
 section {
+  padding: 50px 0;
 
   h2 {
     text-align: center;
@@ -37,64 +68,29 @@ section {
   }
 }
 
-
-
-#navigation {
-  //background-color: #666666;
-  position: absolute;
-  width: 100%;
-
-  .navbar {
-    margin-bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: none;
-    color: #FFFFFF;
-    // transition: background-color 0.5s, color 0.5s;
-
-    .active a {
-      text-decoration: underline;
-    }
-
-    a {
-      color: #FFFFFF;
-    }
-
-    &.navbar-solid {
-      background-color: #c5c5c5;
-      color: $text-color;
-
-      a {
-        color: $text-color;
-      }
-    }
-
-    a:hover,
-    .active a {
-      background: none;
-      color: $blue-color;
-    }
-
-    a:focus {
-      outline: 1px dotted #FFFFFF;
-      background: none;
-    }
-
-  }
-
-  .navbar-brand {
-    padding: 5px 0;
-  }
+.parallax {
+  overflow: hidden;
 }
 
-
+.background-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 
 #home {
-  // background: url('../assets/housewindow.jpg') no-repeat center 0px;
-  background: url('../assets/door-closed.jpg') no-repeat center 0px;
-  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 95vh;
   color: #FFFFFF;
-  //min-height: 80vh;
   padding-top: 100px;
+
+  img.background-image {
+    filter: brightness(50%);
+  }
 
   h1 {
     // font-weight: 200;
@@ -121,8 +117,6 @@ section {
     }
   }
 }
-
-
 
 #services {
 
@@ -203,10 +197,10 @@ section {
 
 
 #img-break {
-  // background: url('../assets/wellington-harbour.jpg') no-repeat center;
-  background: url('../assets/cablecar.jpg') no-repeat center 0px;
-  background-size: cover;
+  position: relative;
+  width: 100%;
   height: 400px;
+  overflow: hidden;
 }
 
 
