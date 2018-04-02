@@ -26,7 +26,8 @@
     "watch:sass": "watch-run -p 'source/sass/*.scss' npm run sass",
     "watch:js": "watch-run -p 'source/js/*.js' npm run js",
     "serve": "browser-sync start --server --startPath \"build/index.html\" --files \"build/index.html, build/assets/**, build/css/*.css, build/js/*.js\"",
-    "dev": "npm-run-all --parallel serve watch:*"
+    "dev": "npm-run-all --parallel serve watch:*",
+    "build": "npm-run-all js sass jade assets"
   },
   "repository": {
     "type": "git",
